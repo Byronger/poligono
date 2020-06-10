@@ -1,0 +1,175 @@
+﻿@model List<poligonotiro.Models.ViewModels.ListaLineaTiro>
+
+@{
+    ViewBag.Title = "Líneas de Tiro";
+}
+<body style="background: url(/Content/images/pol1.jpg); background-size: cover; background-position: center;">
+    <h2>@ViewBag.Title</h2>
+
+    <div class="row" style="text-align:right;padding:5px;">
+        <a href="#" data-toggle="modal" data-target="#agregarlinea" class="btn btn-primary">Nuevo</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped" width="100%" border="3" cellspacing="10" cellpadding="10" style="background: white;">
+                <tr>
+                    <th width="30%">Id Línea Tiro</th>
+                    <th width="50%">Nombre Línea Tiro</th>
+                    <th width="20%" style="text-align: center;">Acciones</th>
+                </tr>
+                @foreach (var oElemento in Model)
+                {
+                    <tr>
+                        <td width="30%">@oElemento.Idlineatiro </td>
+                        <td width="50%">@oElemento.nombre</td>
+                        <td width="20%" align="center">
+                            <a href="" data-toggle="modal" data-target="#editarlinea" class="btn btn-warning" onclick="actualizasupervisor('@oElemento.Idlineatiro','@oElemento.nombre')">Editar</a>
+                            <a href="" data-toggle="modal" data-target="#eliminarlinea" class="btn btn-danger" onclick="eliminasupervisor('@oElemento.Idlineatiro')">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+            function actualizasupervisor(id, nombre) {
+                $('#idlineaact').val(id);
+                $('#nombrelinea').val(nombre);
+            };
+
+            function eliminasupervisor(id) {
+                $('#idlineatiro').val(id);
+            }
+    </script>
+
+
+    <div class="modal fade" id="agregarlinea" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Línea de Tiro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Nuevo", "LineaTiro", FormMethod.Post))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <div class="col col-md-12">
+                                    <label for="my-input">Nombre Línea de Tiro:</label>
+                                    <input type="text" name="nombre" class="form-control" placeholder="Nombre de la línea" required="">
+                                </div>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="editarlinea" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Línea de Tiro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Editar", "LineaTiro", FormMethod.Post))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <input type="hidden" name="Idlineatiro" id="idlineaact" class="form-control" placeholder="ID" required="" readonly="">
+
+                                <div class="col col-md-12">
+                                    <label for="my-input">Nombre:</label>
+                                    <input type="text" name="nombre" id="nombrelinea" class="form-control" placeholder="Nombre de usuario" required="">
+                                </div>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="eliminarlinea" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Línea de Tiro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Eliminar", "LineaTiro", FormMethod.Get))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <input type="hidden" name="idlineatiro" id="idlineatiro" class="form-control" placeholder="ID" required="" readonly="">
+
+                                <h2>¿Está Seguro de eliminar la línea de tiro?</h2>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <input type="submit" value="Aceptar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

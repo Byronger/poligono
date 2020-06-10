@@ -1,0 +1,170 @@
+﻿@model List<poligonotiro.Models.ViewModels.ListaRoles>
+
+@{
+    ViewBag.Title = "Polígono";
+}
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/main1.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/util.css">
+</head>
+
+<body style="background: url(/Content/images/pol1.jpg); background-size: cover; background-position: center;">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/Content/images/apuntando.jpg);">
+                    <span class="login100-form-title-1">
+
+                    </span>
+
+                </div>
+
+
+                @{
+                    if (!string.IsNullOrEmpty(ViewBag.Message))
+                    {
+                        //Message tiene un valor
+                        <div class="alert alert-danger">@ViewBag.Message</div>
+                    }
+
+                    if (!string.IsNullOrEmpty(ViewBag.Message1))
+                    {
+                        //Message tiene un valor
+                        <div class="alert alert-success">@ViewBag.Message1</div>
+                    }
+                }
+
+                <form id='login' action="~/Home/Login" method="post" class="login100-form validate-form">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Usuario es requerido">
+                        <span class="label-input100">
+                            <span class="symbol-input100">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </span>
+                        <input class="input100" type="email" name="email" id="email" placeholder="Ingrese su email">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Contraseña es requerida">
+                        <span class="label-input100">
+                            <span class="symbol-input100">
+                                <i class="fa fa-location-arrow"></i>
+                            </span>
+                        </span>
+                        <input class="input100" type="password" name="password" id="password" placeholder="Ingrese Contraseña">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-b-30">
+
+                    </div>
+
+                    <button type="submit" class="login100-form-btn">
+                        Ingresar
+                    </button>
+
+                    <br />
+                    <button type="button" class="login100-form-btn" data-toggle="modal" data-target="#registrarse">
+                        Registrate
+                    </button>
+
+                    <br /><br /><br />
+
+                </form>
+
+                <p>Copyright &copy; 2020. Polígono de tiro. Todos los derechos reservados. &middot;</p>
+            </div>
+        </div>
+    </div>
+
+    <!--MODALES-->
+    <div class="modal fade" id="registrarse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">REGISTRESE GRATIS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @{
+                        if (!string.IsNullOrEmpty(ViewBag.Message))
+                        {
+                            //Message tiene un valor
+                            <div class="alert alert-danger">@ViewBag.Message</div>
+                        }
+                    }
+                    <form action="~/Home/Registro" method="post">
+
+                        <div class="wrap-input100 validate-input m-b-26">
+                            <input class="input100" type="email" id="emailregistro" name="emailregistro" placeholder="Email" required="">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+
+                            </span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-26">
+                            <input class="input100" type="text" id="userregistro" name="userregistro" placeholder="Su nombre" required="">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+
+                            </span>
+                        </div>
+
+
+                        <div class="wrap-input100 validate-input m-b-18">
+                            <input class="input100" type="password" id="passwordregistro" name="passwordregistro" placeholder="Contraseña" required="">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+
+                            </span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-18">
+                            <input class="input100" type="password" id="passwordconfirmregistro" name="passwordconfirmregistro" placeholder="Repita la contraseña" required="">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+
+                            </span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+
+                        </div>
+
+                        <br><br>
+
+                        <center><button name="submit" type="submit" class="btn btn-primary">REGISTRARSE </button></center>
+
+                        <br><br>
+
+
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>

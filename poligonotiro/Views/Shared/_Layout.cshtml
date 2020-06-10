@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Polígono de Tiro", "Index", "Profile", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li>@Html.ActionLink("Armas", "", "Armas")</li>
+                        <li>@Html.ActionLink("Clientes", "", "Clientes")</li>
+                        <li>@Html.ActionLink("Lineas de tiro", "", "LineaTiro")</li>
+                        <li>@Html.ActionLink("Reservas Web", "", "Reservas")</li>
+                        <li>@Html.ActionLink("Temporizador de línea", "", "Temporizador")</li>
+                        <li>@Html.ActionLink("Supervisores", "", "Supervisores")</li>
+                        <li>@Html.ActionLink("Usuarios", "", "Usuarios")</li>
+
+                        <!--<li>@Html.ActionLink("Roles", "", "Rol")</li>-->
+
+                        <li><a href="/Home/Logout">Cerrar Sesión</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+    <br /><br />
+    <div class="container body-content">
+        @RenderBody()
+        <!--<hr />-->
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Por Byron Santos</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

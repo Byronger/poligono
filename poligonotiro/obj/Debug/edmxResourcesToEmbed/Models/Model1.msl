@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="poligonoModelStoreContainer" CdmEntityContainer="poligonoEntities">
+    <EntitySetMapping Name="arma">
+      <EntityTypeMapping TypeName="poligonoModel.arma">
+        <MappingFragment StoreEntitySet="arma">
+          <ScalarProperty Name="id_arma" ColumnName="id_arma" />
+          <ScalarProperty Name="nombre_arma" ColumnName="nombre_arma" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="numero_serie" ColumnName="numero_serie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cliente">
+      <EntityTypeMapping TypeName="poligonoModel.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="porte_arma" ColumnName="porte_arma" />
+          <ScalarProperty Name="registro_arma" ColumnName="registro_arma" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="linea_tiro">
+      <EntityTypeMapping TypeName="poligonoModel.linea_tiro">
+        <MappingFragment StoreEntitySet="linea_tiro">
+          <ScalarProperty Name="id_linea_tiro" ColumnName="id_linea_tiro" />
+          <ScalarProperty Name="nombre_linea_tiro" ColumnName="nombre_linea_tiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reserva_web">
+      <EntityTypeMapping TypeName="poligonoModel.reserva_web">
+        <MappingFragment StoreEntitySet="reserva_web">
+          <ScalarProperty Name="id_reserva_web" ColumnName="id_reserva_web" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora_inicio" ColumnName="hora_inicio" />
+          <ScalarProperty Name="cantidad_minutos" ColumnName="cantidad_minutos" />
+          <ScalarProperty Name="hora_fin" ColumnName="hora_fin" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+          <ScalarProperty Name="id_linea_tiro" ColumnName="id_linea_tiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rol">
+      <EntityTypeMapping TypeName="poligonoModel.rol">
+        <MappingFragment StoreEntitySet="rol">
+          <ScalarProperty Name="idrol" ColumnName="idrol" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supervisor">
+      <EntityTypeMapping TypeName="poligonoModel.supervisor">
+        <MappingFragment StoreEntitySet="supervisor">
+          <ScalarProperty Name="id_supervisor" ColumnName="id_supervisor" />
+          <ScalarProperty Name="nombre_supervisor" ColumnName="nombre_supervisor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="poligonoModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temporizador_linea">
+      <EntityTypeMapping TypeName="poligonoModel.temporizador_linea">
+        <MappingFragment StoreEntitySet="temporizador_linea">
+          <ScalarProperty Name="id_temporizador" ColumnName="id_temporizador" />
+          <ScalarProperty Name="id_reserva_web" ColumnName="id_reserva_web" />
+          <ScalarProperty Name="funcionalidad" ColumnName="funcionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="poligonoModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

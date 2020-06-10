@@ -1,0 +1,78 @@
+﻿@model List<poligonotiro.Models.ViewModels.ListaRoles>
+
+@{
+    ViewBag.Title = "Roles de usuario";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row" style="text-align:right;padding:5px;">
+    <a href="#" data-toggle="modal" data-target="#agregarrol" class="btn btn-primary">Nuevo</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped" width="100%" border="3" cellspacing="10" cellpadding="10">
+            <tr>
+                <th width="30%">Id Rol</th>
+                <th width="50%">Descripción</th>
+                <th width="20%" style="text-align: center;">Acciones</th>
+            </tr>
+            @foreach (var oElemento in Model)
+            {
+                <tr>
+                    <td width="30%">@oElemento.Id </td>
+                    <td width="50%">@oElemento.descripcion</td>
+                    <td width="20%" align="center">
+                        <a href="" data-toggle="modal" data-target="#agregarrol" class="btn btn-warning">Editar</a>
+                        <a href="" data-toggle="modal" data-target="#agregarrol" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="agregarrol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Rol</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                @using (Html.BeginForm("Nuevo", "Rol", FormMethod.Post))
+                {
+
+                    <div class="row">
+                        <center>
+                            <div class="col col-md-12">
+                                <label for="my-input">Descripción:</label>
+                                <input type="text" name="descripcion" class="form-control" placeholder="Descripción Rol" required="">
+
+                            </div>
+                        </center>
+                    </div>
+
+                    <br />
+
+                    <div class="row" style="text-align: center;">
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                    </div>
+
+                }
+
+            </div>
+
+            <div class="modal-footer">
+
+            </div>
+
+        </div>
+    </div>
+</div>

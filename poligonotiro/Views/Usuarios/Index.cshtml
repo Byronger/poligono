@@ -1,0 +1,219 @@
+﻿@model List<poligonotiro.Models.ViewModels.ListaUsuarios>
+
+@{
+    ViewBag.Title = "Usuarios";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+}
+<body style="background: url(/Content/images/pol1.jpg); background-size: cover; background-position: center;">
+<h2>@ViewBag.Title</h2>
+
+<div class="row" style="text-align:right;padding:5px;">
+    <a href="#" data-toggle="modal" data-target="#agregarusuario" class="btn btn-primary">Nuevo</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped" width="100%" border="3" cellspacing="10" cellpadding="10" style="background: white;">
+            <tr>
+                <th width="5%">Id Usuario</th>
+                <th width="35%">Nombre</th>
+                <th width="25%">Email</th>
+                
+                <th width="10%">Rol</th>
+                <th width="15%" style="text-align: center;">Acciones</th>
+            </tr>
+            @foreach (var oElemento in Model)
+            {
+                <tr>
+                    <td width="5%">@oElemento.Id </td>
+                    <td width="35%">@oElemento.usuario</td>
+                    <td width="25%">@oElemento.correo</td>
+                    
+                    <td width="10%">@oElemento.rol</td>
+                    <td width="15%" align="center">
+                        <a href="" data-toggle="modal" data-target="#editarusuario" class="btn btn-warning" onclick="actualizausuario('@oElemento.Id','@oElemento.usuario','@oElemento.correo','@oElemento.password','@oElemento.rol')">Editar</a>
+                        <a href="" data-toggle="modal" data-target="#eliminarusuario" class="btn btn-danger" onclick="eliminausuario('@oElemento.Id')">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    function actualizausuario(id, usuario, correo, pass, rol) {
+        $('#idactualiza').val(id);
+        $('#usuarioactualiza').val(usuario);
+        $('#correoactualiza').val(correo);
+        $('#contrasenaactualiza').val(pass);
+        $('#idrolact').val(rol);
+    };
+
+    function eliminausuario(id) {
+        $('#idelimina').val(id);
+    }
+</script>
+
+
+<div class="modal fade" id="agregarusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                @using (Html.BeginForm("Nuevo", "Usuarios", FormMethod.Post))
+                {
+
+                    <div class="row">
+                        <center>
+                            <div class="col col-md-12">
+                                <label for="my-input">Nombre:</label>
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre de usuario" required="">
+                            </div>
+                            <br /><br /><br />
+                            <br />
+                            <div class="col col-md-12">
+                                <label for="my-input">Correo Electrónico:</label>
+                                <input type="text" name="correo" class="form-control" placeholder="Correo Electrónico" required="">
+                            </div>
+                            <br /><br /><br /><br />
+                            <div class="col col-md-12">
+                                <label for="my-input">Contraseña:</label>
+                                <input type="password" name="contrasena" class="form-control" placeholder="Contraseña" required="">
+                            </div>
+                            <br /><br /><br /><br />
+                            <div class="col col-md-12">
+                                <label for="my-input">Rol:</label>
+                                @Html.DropDownList("idrol",items,"Selecciona un rol", new { @class="form-control"});
+                                
+                            </div>
+                        </center>
+                    </div>
+
+                    <br />
+
+                    <div class="row" style="text-align: center;">
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                    </div>
+
+                }
+
+            </div>
+
+            <div class="modal-footer">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="editarusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                @using (Html.BeginForm("Editar", "Usuarios", FormMethod.Post))
+                {
+
+                    <div class="row">
+                        <center>
+                                <input type="hidden" name="idactualiza" id="idactualiza" class="form-control" placeholder="ID" required="" readonly="">
+                            
+                            <div class="col col-md-12">
+                                <label for="my-input">Nombre:</label>
+                                <input type="text" name="nombre" id="usuarioactualiza" class="form-control" placeholder="Nombre de usuario" required="">
+                            </div>
+                            <br /><br /><br />
+                            <br />
+                            <div class="col col-md-12">
+                                <label for="my-input">Correo Electrónico:</label>
+                                <input type="text" name="correo" id="correoactualiza" class="form-control" placeholder="Correo Electrónico" required="">
+                            </div>
+                            <br /><br /><br /><br />
+                            <div class="col col-md-12">
+                                <label for="my-input">Contraseña:</label>
+                                <input type="password" name="contrasena" id="contrasenaactualiza" class="form-control" placeholder="Contraseña" required="">
+                            </div>
+                            <br /><br /><br /><br />
+                            <div class="col col-md-12">
+                                <label for="my-input">Rol:</label>
+                                @Html.DropDownList("idrolact", items, "Selecciona un rol", new { @class = "form-control" })
+
+                            </div>
+                        </center>
+                    </div>
+
+                    <br />
+
+                    <div class="row" style="text-align: center;">
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                    </div>
+
+                }
+
+            </div>
+
+            <div class="modal-footer">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="eliminarusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                @using (Html.BeginForm("Eliminar", "Usuarios", FormMethod.Get))
+                {
+
+                    <div class="row">
+                        <center>
+                            <input type="hidden" name="idelimina" id="idelimina" class="form-control" placeholder="ID" required="" readonly="">
+
+                            <h2>¿Esta Seguro de eliminar el usuario?</h2>
+                        </center>
+                    </div>
+
+                    <br />
+
+                    <div class="row" style="text-align: center;">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <input type="submit" value="Aceptar" class="btn btn-primary" />
+                    </div>
+
+                }
+
+            </div>
+
+            <div class="modal-footer">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>

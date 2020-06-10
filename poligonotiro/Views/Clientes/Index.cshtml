@@ -1,0 +1,277 @@
+﻿@model List<poligonotiro.Models.ViewModels.ListaClientes>
+
+@{
+    ViewBag.Title = "Clientes";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+}
+<body style="background: url(/Content/images/pol1.jpg); background-size: cover; background-position: center;">
+    <h2>@ViewBag.Title</h2>
+
+    <div class="row" style="text-align:right;padding:5px;">
+        <a href="#" data-toggle="modal" data-target="#agregarcliente" class="btn btn-primary">Nuevo</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped" width="100%" border="3" cellspacing="10" cellpadding="10" style="background: white;">
+                <tr>
+                    <th width="5%">Id Cliente</th>
+                    <th width="20%">Nombre</th>
+                    <th width="10%">Documento</th>
+                    <th width="10%">Teléfono</th>
+                    <th width="15%">Dirección</th>
+                    <th width="10%">Email</th>
+                    <th width="5%">Porte Arma</th>
+                    <th width="5%">Registro Arma</th>
+                    <th width="5%">Usuario</th>
+                    <th width="15%" style="text-align: center;">Acciones</th>
+                </tr>
+                @foreach (var oElemento in Model)
+                {
+            <tr>
+                <td width="5%">@oElemento.Id </td>
+                <td width="20%">@oElemento.nombrecliente</td>
+                <td width="10%">@oElemento.documento</td>
+                <td width="10%">@oElemento.telefono</td>
+                <td width="15%">@oElemento.direccion</td>
+                <td width="10%">@oElemento.correo</td>
+                <td width="5%">@oElemento.portearma</td>
+                <td width="5%">@oElemento.registroarma</td>
+                <td width="5%">@oElemento.idusuario</td>
+                <td width="15%" align="center">
+                    <a href="" data-toggle="modal" data-target="#editarcliente" class="btn btn-warning" onclick="editarcliente('@oElemento.Id','@oElemento.nombrecliente','@oElemento.documento','@oElemento.telefono','@oElemento.direccion','@oElemento.correo','@oElemento.portearma','@oElemento.registroarma','@oElemento.idusuario')">Editar</a>
+                    <a href="" data-toggle="modal" data-target="#eliminarcliente" class="btn btn-danger" onclick="eliminausuario('@oElemento.Id')">Eliminar</a>
+                </td>
+            </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        function editarcliente(id, nombre, documento, telefono, direccion, email, portearma, registroarma, usuario) {
+        $('#idactualiza').val(id);
+        $('#name').val(nombre);
+        $('#document').val(documento);
+        $('#phone').val(telefono);
+        $('#address').val(direccion);
+        $('#email').val(email);
+        $('#portarm').val(portearma);
+        $('#regist').val(registroarma);
+        $('#idusuarioact').val(usuario);
+    };
+
+    function eliminausuario(id) {
+        $('#idelimina').val(id);
+    }
+    </script>
+
+
+    <div class="modal fade" id="agregarcliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Nuevo", "Clientes", FormMethod.Post))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <div class="col col-md-12">
+                                    <label for="my-input">Nombre:</label>
+                                    <input type="text" name="nombrecliente" class="form-control" placeholder="Nombre del cliente" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Documento:</label>
+                                    <input type="text" name="documento" class="form-control" placeholder="Documento" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Teléfono:</label>
+                                    <input type="number" name="telefono" class="form-control" placeholder="Teléfono" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Dirección:</label>
+                                    <input type="text" name="direccion" class="form-control" placeholder="Dirección" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Correo Electrónico:</label>
+                                    <input type="email" name="correo" class="form-control" placeholder="Correo Electrónico" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Porte Arma:</label>
+                                    <input type="text" name="portearma" class="form-control" placeholder="Porte Arma">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Registro Arma:</label>
+                                    <input type="text" name="registroarma" class="form-control" placeholder="Regisro Arma">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Usuario:</label>
+                                    @Html.DropDownList("idusuario", items, "Selecciona un usuario", new { @class = "form-control" });
+
+                                </div>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="editarcliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Editar", "Clientes", FormMethod.Post))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <input type="hidden" name="idactualiza" id="idactualiza" class="form-control" placeholder="ID" required="" readonly="">
+
+                                <div class="col col-md-12">
+                                    <label for="my-input">Nombre:</label>
+                                    <input type="text" name="nombrecliente" id="name" class="form-control" placeholder="Nombre del cliente" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Documento:</label>
+                                    <input type="text" name="documento" id="document" class="form-control" placeholder="Documento" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Teléfono:</label>
+                                    <input type="number" name="telefono" id="phone" class="form-control" placeholder="Teléfono" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Dirección:</label>
+                                    <input type="text" name="direccion" id="address" class="form-control" placeholder="Dirección" required="">
+                                </div>
+                                <br /><br /><br />
+                                <br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Correo Electrónico:</label>
+                                    <input type="email" name="correo" id="email" class="form-control" placeholder="Correo Electrónico" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Porte Arma:</label>
+                                    <input type="text" name="portearma" id="portarm" class="form-control" placeholder="Porte Arma">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Registro Arma:</label>
+                                    <input type="text" name="registroarma" id="regist" class="form-control" placeholder="Regisro Arma">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Rol:</label>
+                                    @Html.DropDownList("idusuarioact", items, "Selecciona un usuario", new { @class = "form-control" });
+
+                                </div>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="eliminarcliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Eliminar", "Clientes", FormMethod.Get))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <input type="hidden" name="idelimina" id="idelimina" class="form-control" placeholder="ID" required="" readonly="">
+
+                                <h2>¿Está Seguro de eliminar el cliente?</h2>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <input type="submit" value="Aceptar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

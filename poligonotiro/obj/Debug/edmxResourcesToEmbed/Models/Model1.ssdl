@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="poligonoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="arma">
+    <Key>
+      <PropertyRef Name="id_arma" />
+    </Key>
+    <Property Name="id_arma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_arma" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="foto" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="numero_serie" Type="nchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_cliente" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="documento" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefono" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="porte_arma" Type="varchar" MaxLength="50" />
+    <Property Name="registro_arma" Type="varchar" MaxLength="50" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="linea_tiro">
+    <Key>
+      <PropertyRef Name="id_linea_tiro" />
+    </Key>
+    <Property Name="id_linea_tiro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_linea_tiro" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reserva_web">
+    <Key>
+      <PropertyRef Name="id_reserva_web" />
+    </Key>
+    <Property Name="id_reserva_web" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="hora_inicio" Type="time" Precision="7" Nullable="false" />
+    <Property Name="cantidad_minutos" Type="int" Nullable="false" />
+    <Property Name="hora_fin" Type="time" Precision="7" Nullable="false" />
+    <Property Name="costo" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="id_linea_tiro" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rol">
+    <Key>
+      <PropertyRef Name="idrol" />
+    </Key>
+    <Property Name="idrol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="supervisor">
+    <Key>
+      <PropertyRef Name="id_supervisor" />
+    </Key>
+    <Property Name="id_supervisor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_supervisor" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="temporizador_linea">
+    <Key>
+      <PropertyRef Name="id_temporizador" />
+    </Key>
+    <Property Name="id_temporizador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_reserva_web" Type="int" Nullable="false" />
+    <Property Name="funcionalidad" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_usuario" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="contrasena" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="id_rol" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_cliente_usuario">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+    <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="cliente">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_reserva_web_linea_tiro">
+    <End Role="linea_tiro" Type="Self.linea_tiro" Multiplicity="1" />
+    <End Role="reserva_web" Type="Self.reserva_web" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="linea_tiro">
+        <PropertyRef Name="id_linea_tiro" />
+      </Principal>
+      <Dependent Role="reserva_web">
+        <PropertyRef Name="id_linea_tiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_temporizador_linea_reserva_web">
+    <End Role="reserva_web" Type="Self.reserva_web" Multiplicity="1" />
+    <End Role="temporizador_linea" Type="Self.temporizador_linea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="reserva_web">
+        <PropertyRef Name="id_reserva_web" />
+      </Principal>
+      <Dependent Role="temporizador_linea">
+        <PropertyRef Name="id_reserva_web" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuario_rol">
+    <End Role="rol" Type="Self.rol" Multiplicity="1" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rol">
+        <PropertyRef Name="idrol" />
+      </Principal>
+      <Dependent Role="usuario">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="poligonoModelStoreContainer">
+    <EntitySet Name="arma" EntityType="Self.arma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="linea_tiro" EntityType="Self.linea_tiro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reserva_web" EntityType="Self.reserva_web" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rol" EntityType="Self.rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="supervisor" EntityType="Self.supervisor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="temporizador_linea" EntityType="Self.temporizador_linea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_cliente_usuario" Association="Self.FK_cliente_usuario">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="cliente" EntitySet="cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_reserva_web_linea_tiro" Association="Self.FK_reserva_web_linea_tiro">
+      <End Role="linea_tiro" EntitySet="linea_tiro" />
+      <End Role="reserva_web" EntitySet="reserva_web" />
+    </AssociationSet>
+    <AssociationSet Name="FK_temporizador_linea_reserva_web" Association="Self.FK_temporizador_linea_reserva_web">
+      <End Role="reserva_web" EntitySet="reserva_web" />
+      <End Role="temporizador_linea" EntitySet="temporizador_linea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuario_rol" Association="Self.FK_usuario_rol">
+      <End Role="rol" EntitySet="rol" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

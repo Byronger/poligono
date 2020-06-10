@@ -1,0 +1,215 @@
+﻿@model List<poligonotiro.Models.ViewModels.ListaArmas>
+
+@{
+    ViewBag.Title = "Armas";
+}
+<body style="background: url(/Content/images/pol1.jpg); background-size: cover; background-position: center;">
+    <h2>@ViewBag.Title</h2>
+
+    <div class="row" style="text-align:right;padding:5px;">
+        <a href="#" data-toggle="modal" data-target="#agregararma" class="btn btn-primary">Nuevo</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped" width="100%" border="3" cellspacing="10" cellpadding="10" style="background: white;">
+                <tr>
+                    <th width="10%">Id Arma</th>
+                    <th width="30%">Nombre Arma</th>
+                    <th width="15%">Modelo</th>
+                    <th width="15%">Foto</th>
+                    <th width="15%">Número Serie</th>
+                    <th width="15%" style="text-align: center;">Acciones</th>
+                </tr>
+                @foreach (var oElemento in Model)
+                {
+                    <tr>
+                        <td width="10%">@oElemento.Idarma </td>
+                        <td width="30%">@oElemento.nombrearma</td>
+                        <td width="15%">@oElemento.modelo </td>
+                        <td width="15%">@oElemento.foto</td>
+                        <td width="15%">@oElemento.numeroserie</td>
+                        <td width="15%" align="center">
+                            <a href="" data-toggle="modal" data-target="#editararma" class="btn btn-warning" onclick="actualizararma('@oElemento.Idarma','@oElemento.nombrearma','@oElemento.modelo','@oElemento.foto','@oElemento.numeroserie')">Editar</a>
+                            <a href="" data-toggle="modal" data-target="#eliminararma" class="btn btn-danger" onclick="eliminararma('@oElemento.Idarma')">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+            function actualizararma(id, nombre, modelo, foto, numeroserie) {
+                $('#idarma').val(id);
+                $('#name').val(nombre);
+                $('#model').val(modelo);
+                $('#serie').val(numeroserie);
+                $('#photo').val(foto);
+                
+            };
+
+            function eliminararma(id) {
+                $('#idarmadel').val(id);
+            }
+    </script>
+
+
+    <div class="modal fade" id="agregararma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Arma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Nuevo", "Armas", FormMethod.Post))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <div class="col col-md-12">
+                                    <label for="my-input">Nombre Arma:</label>
+                                    <input type="text" name="nombrearma" class="form-control" placeholder="Nombre del Arma" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Modelo:</label>
+                                    <input type="text" name="modelo" class="form-control" placeholder="Modelo" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Foto:</label>
+                                    <input type="file" name="foto" class="form-control" placeholder="Foto" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Número Serie:</label>
+                                    <input type="text" name="numeroserie" class="form-control" placeholder="Número de Serie" required="">
+                                </div>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="editararma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Arma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Editar", "Armas", FormMethod.Post))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <input type="hidden" name="Idarma" id="idarma" class="form-control" placeholder="ID" required="" readonly="">
+
+                                <div class="col col-md-12">
+                                    <label for="my-input">Nombre Arma:</label>
+                                    <input type="text" name="nombrearma" id="name" class="form-control" placeholder="Nombre del Supervisor" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Modelo:</label>
+                                    <input type="text" name="modelo" id="model" class="form-control" placeholder="Modelo" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Foto:</label>
+                                    <input type="file" name="foto" id="photo" class="form-control" placeholder="Foto" required="">
+                                </div>
+                                <br /><br /><br /><br />
+                                <div class="col col-md-12">
+                                    <label for="my-input">Número Serie:</label>
+                                    <input type="text" name="numeroserie" id="serie" class="form-control" placeholder="Número de Serie" required="">
+                                </div>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="eliminararma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Arma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    @using (Html.BeginForm("Eliminar", "Armas", FormMethod.Get))
+                    {
+
+                        <div class="row">
+                            <center>
+                                <input type="hidden" name="idarma" id="idarmadel" class="form-control" placeholder="ID" required="" readonly="">
+
+                                <h2>¿Está Seguro de eliminar el arma?</h2>
+                            </center>
+                        </div>
+
+                        <br />
+
+                        <div class="row" style="text-align: center;">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <input type="submit" value="Aceptar" class="btn btn-primary" />
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
