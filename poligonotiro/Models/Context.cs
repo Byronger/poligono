@@ -9,20 +9,15 @@
 
 namespace poligonotiro.Models
 {
-    using System;
     using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
-    
+
     public partial class poligonoEntities : DbContext
     {
-        public poligonoEntities()
-            : base("name=poligonoEntities")
+        public poligonoEntities() : base("name=poligonoEntities") { }
+
+        public static poligonoEntities Create()
         {
-        }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
+            return new poligonoEntities();
         }
     
         public virtual DbSet<arma> arma { get; set; }

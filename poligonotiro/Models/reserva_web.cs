@@ -11,7 +11,8 @@ namespace poligonotiro.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class reserva_web
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +20,8 @@ namespace poligonotiro.Models
         {
             this.temporizador_linea = new HashSet<temporizador_linea>();
         }
-    
+
+        [Key]
         public int id_reserva_web { get; set; }
         public int id_usuario { get; set; }
         public System.DateTime fecha { get; set; }
