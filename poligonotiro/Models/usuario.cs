@@ -11,7 +11,8 @@ namespace poligonotiro.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +20,8 @@ namespace poligonotiro.Models
         {
             this.cliente = new HashSet<cliente>();
         }
-    
+
+        [Key]
         public int id_usuario { get; set; }
         public string nombre_usuario { get; set; }
         public string email { get; set; }
