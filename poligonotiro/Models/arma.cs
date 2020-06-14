@@ -11,9 +11,11 @@ namespace poligonotiro.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class arma
     {
+        [Key]
         public int id_arma { get; set; }
         public string nombre_arma { get; set; }
         public string modelo { get; set; }

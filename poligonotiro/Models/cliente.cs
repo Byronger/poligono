@@ -11,9 +11,11 @@ namespace poligonotiro.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class cliente
     {
+        [Key]
         public int id_cliente { get; set; }
         public string nombre_cliente { get; set; }
         public string documento { get; set; }

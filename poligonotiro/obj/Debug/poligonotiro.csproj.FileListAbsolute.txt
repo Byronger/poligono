@@ -88,3 +88,183 @@ C:\Users\FAMILIA\source\repos\poligonotiro\poligonotiro\obj\Debug\poligonotiro.c
 C:\Users\FAMILIA\source\repos\poligonotiro\poligonotiro\obj\Debug\poligonotiro.csproj.CopyComplete
 C:\Users\FAMILIA\source\repos\poligonotiro\poligonotiro\obj\Debug\poligonotiro.dll
 C:\Users\FAMILIA\source\repos\poligonotiro\poligonotiro\obj\Debug\poligonotiro.pdb
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\poligonotiro.dll.config
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\poligonotiro.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\poligonotiro.pdb
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\csc.exe
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\csc.exe.config
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\csc.rsp
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\csi.exe
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\csi.exe.config
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\csi.rsp
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.AppContext.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Console.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.IO.Compression.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Net.Http.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.ValueTuple.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\vbc.exe
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\vbc.exe.config
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\vbc.rsp
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\VBCSCompiler.exe
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\Antlr3.Runtime.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\EntityFramework.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\EntityFramework.SqlServer.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\Newtonsoft.Json.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Helpers.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Mvc.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Optimization.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Razor.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.WebPages.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.WebPages.Razor.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\WebGrease.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\EntityFramework.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\EntityFramework.SqlServer.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Helpers.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Mvc.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Optimization.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.Razor.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.WebPages.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\System.Web.WebPages.Razor.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\Newtonsoft.Json.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\Antlr3.Runtime.pdb
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\es\System.Web.Razor.resources.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\obj\Debug\poligonotiro.csprojAssemblyReference.cache
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\obj\Debug\poligonotiro.csproj.CoreCompileInputs.cache
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\obj\Debug\poligonotiro.csproj.CopyComplete
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\obj\Debug\poligonotiro.dll
+C:\Users\Loaderon\Desktop\poligono\poligonotiro\obj\Debug\poligonotiro.pdb
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\obj\Debug\poligonotiro.csprojAssemblyReference.cache
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\obj\Debug\poligonotiro.csproj.CoreCompileInputs.cache
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\obj\Debug\poligonotiro.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\obj\Debug\poligonotiro.pdb
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\poligonotiro.dll.config
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\poligonotiro.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\poligonotiro.pdb
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\csc.exe
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\csc.exe.config
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\csc.rsp
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\csi.exe
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\csi.exe.config
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\csi.rsp
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.AppContext.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Console.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.IO.Compression.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Net.Http.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.ValueTuple.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\vbc.exe
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\vbc.exe.config
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\vbc.rsp
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\VBCSCompiler.exe
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\Antlr3.Runtime.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\EntityFramework.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\EntityFramework.SqlServer.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\Newtonsoft.Json.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Helpers.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Mvc.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Optimization.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Razor.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.WebPages.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.WebPages.Razor.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\WebGrease.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\EntityFramework.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\EntityFramework.SqlServer.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Helpers.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Mvc.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Optimization.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.Razor.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.WebPages.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\System.Web.WebPages.Razor.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\Newtonsoft.Json.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\Antlr3.Runtime.pdb
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\es\System.Web.Razor.resources.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Loaderon\Desktop\Laboratorio de SkollARS\c#\poligono\poligonotiro\obj\Debug\poligonotiro.csproj.CopyComplete
